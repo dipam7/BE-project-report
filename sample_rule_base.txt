@@ -1,17 +1,17 @@
 location -> doctor's pc, hospital pc, outside
 
-rule 1: if the doctor accesses data from his own pc then there are less chances of him being malicious.
+rule 1: if the doctor accesses data from his own allocated hospital pc, then there are less chances of him being malicious.
 
-rule 2: if the doctor accesses data from the hospital's pc then there are medium chances of him being malicious.
+rule 2: if the doctor accesses data from a hospital pc, not allocated to him, then there are medium chances of him being malicious.
 
-rule 3: if the doctor accesses data from his outside then there are more chances of him being malicious.
+rule 3: if the doctor accesses data from his outside, then there are more chances of him being malicious.
 
 
 data sensitivity -> full access, medium access, low / no access
 
 rule 1: general data will come under full access.
 
-rule 2: organ specific data and tests will come under medium access and whether access will be granted will depend on other factors.
+rule 2: organ specific data and tests(based on relevancy PS: I suggest we put medical tests criteria in the relevance section) will come under medium access and whether access will be granted will depend on other factors.
 
 rule 3: things like mediclaim will come under low / no access.
 
@@ -24,7 +24,7 @@ rule 2: if the data accessed is not related, chances of doctor being malicious a
 
 emergency -> yes, no
 
-rule 1: if it's an emergency grant access to all kinds of data
+rule 1: if it's an emergency grant access to all kinds of data, and dont consider the time factor then
 
 rule 2: if there's no emergency, check other factors
 
