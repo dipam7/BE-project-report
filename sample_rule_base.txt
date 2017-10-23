@@ -1,4 +1,4 @@
-location -> doctor's pc, hospital pc, outside
+LOCATION -> doctor's pc, hospital pc, outside
 
 rule 1: if the doctor accesses data from his own allocated hospital pc, then there are less chances of him being malicious.
 
@@ -7,29 +7,27 @@ rule 2: if the doctor accesses data from a hospital pc, not allocated to him, th
 rule 3: if the doctor accesses data from his outside, then there are more chances of him being malicious.
 
 
-data sensitivity -> full access, medium access, low / no access
-
-rule 1: general data will come under full access.
-
-rule 2: organ specific data and tests(based on relevancy PS: I suggest we put medical tests criteria in the relevance section) will come under medium access and whether access will be granted will depend on other factors.
-
-rule 3: things like mediclaim will come under low / no access.
-
 # will be based on doctor's specialization
-relevance -> yes, no
+RELEVANCE -> yes, no
 
 rule 1: if the data accessed is related to the doctor's specialization, access will be granted.
 
 rule 2: if the data accessed is not related, chances of doctor being malicious are more.
 
-emergency -> yes, no
+rule 3: if mediclaim information is accessed, then deny at any cost.
+
+EMERGENCY -> yes, no
 
 rule 1: if it's an emergency grant access to all kinds of data, and dont consider the time factor then
 
 rule 2: if there's no emergency, check other factors
 
-time of the day -> hospital hours, other
+TIME OF THE DAY -> hospital hours, other
 
 rule 1: if the doctor accesses data during hospital hours then there are less chances of him being malicious
 
 rule 2: if the doctor acccesses data outside of hospital hours then there are more chances of him being malicious
+
+PREVIOUS ACCESS HISTORY -> high, low
+
+rule : depending on grant frequency, probability of granting access will be calculated and compared with a threshold
