@@ -9,5 +9,26 @@ They determine what activity a certain honest doctor will perform with respect t
 The problem with this method is that it is not as accurate as one expects it to be. Another glaring flaw is that they have only considered one paramter to determine if a doctor is malicious, i.e. relevance of the data accessed.
 The solution thus ends up ignoring myraid of other factors that can contribute towards determining spiteful activities, thus proving to be inefficient.
 
-If we don't find another paper we write about clustering based analysis of the paper
-which finds fraud in prescriptions, and then saying how this approach won't be useful to us
+In another paper [2], clustering algorithms were used to analyse and hence group hospital data for better management. The paper mainly
+focuses on order history. It processes these order histories in order to find out the temporal global characteristics of clinical activities.
+Once it has done so, it keeps applying clustering techniques to the results until they converge. The final output is then expected to
+be the optimum output. For example the output may be a particular day when there is highest activity for a particular test or the time
+of the day when there is least activity. The major drawback of a clustering based approach is that, since it is unsupervised, the clusters
+formed may be the opposite of ones we expect. For example if there were a lot of malicious overprescribed orders in the history database,
+those will form a cluster and hence end up as a category.
+
+
+The comparison table of the studied reference papers is as follows:
+
+Reference paper [1] - Quantified Risk-Adaptive Access Control for Patient
+Privacy Protection in Health Information Systems
+
+reference model - a risk based adaptive model to keep a check on the data consumed by information consumers.
+
+drawbacks - The system is less accurate and considers only one paramter i.e. relevance of data accessed.
+
+Reference paper [2] - Clustering-based Analysis in Hospital Information Systems
+
+reference model - A clustering based algorithm to group orders based on various identified attributes
+
+drawbacks - clustering may lead to a lot of fake orders forming a cluster.
