@@ -1,0 +1,18 @@
+the process begins with a doctor requesting a certain data about a certain patient.
+
+The query is processed to find out the location of access, time of access and also
+the type of data. Whether the access is an emergency case or not is also mentioned
+by the doctor beforehand. All these, along with the previous history are
+combimed to form an input.
+If the network is not already trained the input is passed to the knowledge base so
+as to calculate the initial weights and also to the neural network as part of the
+training data. The neural network produces a certain output which is compared
+with the desired output (derived from the knowledge base) and the weights are
+adjusted accordingly. The loop continues till the network produces output as
+expected.
+If the network is trained, the input is passed to the neural network and the actual
+output of the system is produced. This is again compared with a desired output, i.e.
+a threshold, hence producing a final output of the system, whether or not access
+will be granted.
+Finally the activity is logged into the previous history database for future
+reference.
